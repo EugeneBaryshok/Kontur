@@ -1,0 +1,16 @@
+﻿User-agent: *
+Allow: /
+Disalow:/download?id=price_project.doc
+Disalow:/download?id=price_ozelen.doc
+Disalow:/download?id=price_project.doc
+Disalow:/download?id=scheme_light.pdf
+Disalow:/download?id=price_uhod.doc
+Disalow:/download?id=plan_pokrytii.pdf
+Disalow:/download?id=scheme_drenaj.pdf
+Disalow:/download?id=price_stone.xls
+Disalow:/download?id=razbiv_chertezh.pdf
+Disalow:/download?id=price_blag.doc
+
+
+Host: konturland.ru
+Sitemap: http://konturland.ru/sitemap.xml

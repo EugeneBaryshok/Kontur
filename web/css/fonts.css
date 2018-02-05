@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "Bad Script";
+    src: url("../fonts/BadScriptRegular/BadScriptRegular.eot");
+    src: url("../fonts/BadScriptRegular/BadScriptRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/BadScriptRegular/BadScriptRegular.woff") format("woff"),
+    url("../fonts/BadScriptRegular/BadScriptRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Dancing Script";
+    src: url("../fonts/DancingScript/DancingScript-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Poiret One";
+    src: url("../fonts/PoiretOne/PoiretOne-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Comfortaa";
+    src: url("../fonts/Comfortaa/Comfortaa-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans/OpenSans-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: light;
+}

@@ -1,0 +1,278 @@
+#Glavnaya stranica - default.html
+#DirectoryIndex default.html
+
+
+
+#Svoya stranica oshibki 404
+#ErrorDocument 404 /404.html
+
+
+#Zakrit dostup dlya vseh
+#deny from all
+
+
+#Razreshit vhod tolko s adresa 208.77.188.166
+#Order deny,allow 
+#Deny from all 
+#Allow from 208.77.188.166
+
+
+#Perenapravlenie na sait test.com
+#Redirect / http://www.test.com
+
+
+#Zapret na otobrajenie failov v directorii pri otsutstvii indeksnogo faila
+#Options -Indexes
+
+
+#Otobrajenie failov v directorii pri otsutsvii indeksnogo faila
+#Options +Indexes
+
+
+#Ustanovit parol na directoriu
+#AuthName ProtectedZone 
+#AuthType Basic
+#AuthUserFile /home/testuser/.htpasswd
+#require valid-user
+
+
+#Podderjka SSI v html
+#AddType text/html .shtml .htm .html 
+#AddHandler server-parsed .shtml 
+#Options +Includes
+
+
+#Privyazka domena subdomain.domain.ru k papke subdomain
+#RewriteEngine on
+#RewriteCond %{HTTP_HOST} (www\.)?subdomain\.domen\.ru$
+#RewriteCond %{REQUEST_URI} !^(/)?subdomain/
+#RewriteRule ^(.*)$ subdomain/$1
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.konturland\.ru$ [NC]
+RewriteRule ^(.*)$ http://konturland.ru/$1 [R=301,L]
+
+
+
+#Obrabotka php v html
+#RemoveHandler .html .htm
+#AddType application/x-httpd-php .php .htm .html
+
+
+#Zapret dostupa s opredelennih IP
+#allow from all
+#Deny from 208.77.188.166
+#Deny from 82.98.86.174
+
+
+#Parol na ska4ivanie faila
+#<Files private.zip>
+#AuthName "Users zone"
+#AuthType Basic
+#AuthUserFile /home/testuser/.htpasswd
+#</Files>
+
+
+#Parol na gruppu failov(v primere dlya vse failov *.sql)
+#<Files "\.(sql)$">
+#AuthName "Protected zone"
+#AuthType Basic
+#AuthUserFile /home/testuser/.htpasswd
+#</Files>
+
+#AuthType Basic   
+#AuthName "Private zone. Only for administrator!" 
+#AuthUserFile  /home/rozenber/www/site4/public_html/.htpasswd   
+#require valid-user
+
+
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks
+    RewriteEngine On
+</IfModule>
+ 
+<IfModule mod_rewrite.c>
+	
+# Temp [302] URL redirects
+	RewriteCond %{QUERY_STRING} module=sitemap
+	RewriteRule ^$ /? [L,R=302]
+	
+# Permanent [301] URL redirects
+    RewriteCond %{REQUEST_URI} ^(.*)/{2,}(.*)$
+    RewriteRule . %1/%2 [R=301,L]
+
+	RewriteCond %{QUERY_STRING} module=news&id=29 [or]
+	RewriteCond %{QUERY_STRING} module=news [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=7
+	RewriteRule ^$ /? [L,R=301]
+
+	RewriteCond %{QUERY_STRING} module=articles&id=135 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=147 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=148 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=149 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=150 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=151 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=187 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=188 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=189 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=190 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=191 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=192 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=193 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=194
+	RewriteRule ^$ /services/blag? [L,R=301]
+	
+	RewriteCond %{QUERY_STRING} module=articles&id=136 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=152 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=153 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=154 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=142 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=168 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=174 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=175
+	RewriteRule ^$ /services/ozelen? [L,R=301]
+	
+	RewriteCond %{QUERY_STRING} module=articles&id=141 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=185
+	RewriteRule ^$ /services/uhod? [L,R=301]
+	
+	RewriteCond %{QUERY_STRING} module=articles&id=143 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=177 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=178 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=179 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=180 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=181 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=182 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=183 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=184 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=186 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=196
+	RewriteRule ^$ /services/stone? [L,R=301]
+	
+	RewriteCond %{QUERY_STRING} module=articles&id=13 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=8 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=14 
+	RewriteRule ^$ /contact? [L,R=301]
+	
+        RewriteRule ^contact/ /contact? [L,R=302]
+
+	RewriteCond %{QUERY_STRING} module=articles&id=129 [or]
+	RewriteCond %{QUERY_STRING} id=129&module=articles [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=11
+	RewriteRule ^$ /price/blag? [L,R=301]
+	
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=62 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=63 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section_gallery&id=66 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section_gallery&id=65 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section_gallery&id=64 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=87 [or]
+	RewriteCond %{QUERY_STRING} module=catalog [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section_gallery&id=67 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section_gallery&id=68 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section_gallery&id=69 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section_gallery&id=70 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=66 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=64 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section_gallery&id=93
+	RewriteRule ^$ /gallary/index? [L,R=301]
+	
+	RewriteCond %{QUERY_STRING} module=articles&id=128
+	RewriteRule ^$ /price/project? [L,R=301]
+	
+	RewriteCond %{QUERY_STRING} module=articles&id=130 [or]
+	RewriteCond %{QUERY_STRING} module=articles&id=132
+	RewriteRule ^$ /price/ozelen? [L,R=301]
+	
+	RewriteCond %{QUERY_STRING} module=articles&id=167
+	RewriteRule ^$ /price/kamen? [L,R=301]
+	
+	RewriteCond %{QUERY_STRING} module=articles&id=131
+	RewriteRule ^$ /price/uhod? [L,R=301]
+	
+	RewriteCond %{QUERY_STRING} module=articles&id=134 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section_gallery&id=95 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section_gallery&id=97 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section_gallery&id=99 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section_gallery&id=101 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section_gallery&id=104 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section_gallery&id=105 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section_gallery&id=107 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=95 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=105 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=69 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=101 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=93 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=67 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=68 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=65 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=70 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=71 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=72 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=97 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=99 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=104 [or]
+	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=107
+	RewriteRule ^$ /services/project? [L,R=301]
+
+	
+    RewriteCond %{REQUEST_URI} ^/.*
+    RewriteRule ^(.*)$ web/$1 [L]
+
+    RewriteCond %{REQUEST_URI} !^/web/
+    RewriteCond %{REQUEST_FILENAME} !-f [OR]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^.*$ web/index.php
+
+
+
+#RewriteRule ^assets/(.*)$ /web/assets/$1 [L]
+#RewriteRule ^css/(.*)$ web/css/$1 [L]
+#RewriteRule ^js/(.*)$ web/js/$1 [L]
+#RewriteRule ^img/(.*)$ web/img/$1 [L]
+#RewriteRule (.*) /web/$1
+</IfModule> 
+
+
+#Options +FollowSymLinks
+#IndexIgnore */*
+#RewriteEngine on
+
+#RewriteCond %{REQUEST_URI} !^/(web)
+#RewriteRule ^assets/(.*)$ /web/assets/$1 [L]
+#RewriteRule ^css/(.*)$ web/css/$1 [L]
+#RewriteRule ^js/(.*)$ web/js/$1 [L]
+#RewriteRule ^img/(.*)$ web/img/$1 [L]
+#RewriteRule (.*) /web/$1
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule . /web/index.php
+
+# сжатие text, html, javascript, css, xml:
+<ifModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>
+
+# Включаем кэш в браузерах посетителей
+<ifModule mod_headers.c>
+    # Все html и htm файлы будут храниться в кэше браузера один день
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=43200"
+    </FilesMatch>
+    # Все css, javascript и текстовые файлы будут храниться в кэше браузера одну неделю
+    <FilesMatch "\.(js|css|txt)$">
+        Header set Cache-Control "max-age=604800"
+    </FilesMatch>
+    # Все флэш файлы и изображения будут храниться в кэше браузера один месяц
+    <FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png)$">
+        Header set Cache-Control "max-age=2592000"
+    </FilesMatch>
+    <FilesMatch "\.(ttf)$">
+        Header set Cache-Control "max-age=12592000"
+    </FilesMatch>
+    # Отключаем кеширование php и других служебных файлов
+    <FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+        Header unset Cache-Control
+    </FilesMatch>
+</IfModule>

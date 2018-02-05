@@ -1,0 +1,340 @@
+
+.proekt_top {
+    background: url(../img/bg_new_2.jpg) no-repeat 80% 0 fixed;
+    /*background-image: linear-gradient(180deg, transparent, #005dab), linear-gradient(180deg, rgba(0, 93, 171, .9), rgba(0, 93, 171, .9)), url("http://uploads.webflow.com/5740f30215d374a82613f0de/57f57749b6eac70825eb7276_photo-1463104264350-ec39e9ccd74b.jpeg");*/
+    /*background-image:  linear-gradient(180deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url("../img/bg_new_2.jpg");*/
+    background-size: cover;
+    height: 52vh;
+    position: relative;
+
+}
+
+/*@media (max-width: 1300px) {*/
+/*.proekt_top {*/
+/*height: 100vh;*/
+/*}*/
+/*}*/
+
+.jumbotron-pages {
+    text-align: left;
+    bottom: 55vh;
+
+    /*margin-top: 40px;*/
+}
+
+.jumbotron-pages p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-bottom: 10px;
+    /*color: #1a1a1a;*/
+}
+
+.jumbotron-pages h1 {
+    font-size: 50px;
+    text-align: left;
+    /*color: #1a1a1a;*/
+    border-bottom: 2px #3ca630 solid;
+
+}
+
+.transp_block
+{
+    background-color: rgba(0,0,0,0.6);
+}
+
+.jumbotron-pages button {
+
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 10px;
+}
+
+ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+.dot > li, ol > li {
+    padding-left: 20px;
+    position: relative;
+    margin: 10px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+ol > li:before {
+    content: '✔';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #3ca630;
+}
+
+/*.dot > li {*/
+
+    /*color: #3ca630;*/
+/*}*/
+
+.proekt_1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.proekt_2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /*height: 750px;*/
+    background-color: #fff2e6;
+    position: relative;
+}
+
+
+.wood {
+    background: url(../img/paper_white.jpg) no-repeat center fixed;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    /*background-color: white*/
+}
+.dop_doc_div
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.dop_doc_p
+{
+    color: #acacac;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 300;
+}
+.grass_bg {
+    background: url(../img/grass_bg.jpg) no-repeat center fixed;
+    background-size: cover;
+    /*height: 600px;*/
+}
+
+
+.blag_banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banner_tulips.jpg) no-repeat center fixed;
+    background-size: cover;
+    padding: 50px;
+}
+
+.blag_banner p {
+    /*font-family: 'Comfortaa', 'Open Sans', sans-serif;*/
+    max-width: 500px;
+    text-align: left;
+}
+
+.addBlock_2 {
+    background-color: #fff;
+    box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.11);
+    padding: 57px 50px 95px;
+    height: 220px;
+
+}
+
+.addBlock_2 img {
+    width: 60px;
+    height: 60px;
+    line-height: 56px;
+    font-size: 60px;
+}
+
+.addBlock_2 a {
+    color: grey;
+    text-decoration: none;
+
+}
+
+.addBlock_2 p {
+    font-family: 'Comfortaa', sans-serif;
+    margin-top: 49px;
+
+    text-align: left;
+    font-size: 16px;
+}
+
+.circle {
+    width: 360px;
+    height: 360px;
+    background-color: #fff;
+    box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.41);
+    /*opacity: 0.5;*/
+    -moz-border-radius: 180px;
+    -webkit-border-radius: 180px;
+    border-radius: 180px;
+    margin: 10px;
+    position: relative;
+    text-align: center;
+    /*cursor: pointer;*/
+    padding: 30px;
+    overflow: hidden;
+}
+
+/*.circle_content {
+    position: absolute;
+    top: 14%;
+    width: 400px;
+}
+
+.circle_content p {
+    /*font-size:20px;*/
+    /*color: #494949;*
+}*/
+
+.circle:hover {
+    opacity: 1.0;
+    transition-duration: 0.5s;
+
+}
+
+.circle img {
+    height: 400px;
+    left: -20%;
+    position: absolute;
+    top: 0;
+}
+
+.additional_block, .blag_banner {
+    color: white;
+    background-color: #2f2621;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.additional_p,.blag_banner p {
+    font-size: 22px;
+    color: white;
+}
+
+.ozelen_1, .price_div {
+
+    padding: 50px;
+    padding-bottom: 100px;
+}
+
+.ozelen_1 p , .price_div p{
+    margin-top: 40px;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+
+    .main_block
+    {
+        padding-bottom:50px;
+        padding-top:50px;
+    }
+    .main_block ul
+    {
+        padding-left: 0;
+
+    }
+    #main_ul li
+    {
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .main_block p:first-child {
+        margin-top: 0px;
+    }
+    .main_block li
+    {
+        font-size: 16px;
+    }
+    .main_block p {
+        margin-top: 20px;
+        line-height: 1.5;
+        font-size: 16px;
+    }
+    .main_div_left
+    {
+		padding-top: 60px;
+        padding-right: 50px;
+    }
+    .main_div_right
+    {
+		padding-top: 60px;
+        padding-left: 50px;
+    }
+
+
+@media (max-width: 768px)
+{
+
+    .additional_p
+    {
+        font-size:16px;
+    }
+    .jumbotron-pages h1
+    {
+        font-size: 36px;
+    }
+    .jumbotron-pages p
+    {
+        font-size: 18px;
+    }
+    .proekt_img_hide_1, .proekt_img_hide_2
+    {
+        height: 100%;
+        position: unset !important;
+        width: 100% !important;
+    }
+
+    .img_div, .img_div img
+    {
+        height: 260px;
+    }
+    .img_div img {
+        left: 10px;
+    }
+    .blag_banner
+    {
+        padding-left: 5px;
+    }
+    /*.dot*/
+    /*{*/
+        /*padding-left: 5px;*/
+    /*}*/
+    /*.dot > li, ol > li {*/
+        /*padding-left: 25px;*/
+        /*position: relative;*/
+        /*margin: 10px;*/
+        /*font-size: 14px;*/
+        /*line-height: 1.5;*/
+    /*}*/
+
+    .circle
+    {
+        -moz-border-radius: 0px;
+        -webkit-border-radius: 0px;
+        border-radius: 0px;
+
+        width: 280px;
+        height: 280px;
+        margin-bottom: 20px ;
+        margin-top: 20px;
+    }
+    .header
+    {
+        padding: 0 !important;
+    }
+    .price_div .row
+    {
+        margin:0;
+    }
+    .ozelen_1
+    {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+}
