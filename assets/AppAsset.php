@@ -31,6 +31,7 @@ class AppAsset extends AssetBundle
         'css/main_pages.css',
         'css/gallary.css',
         'css/price.css',
+        'css/articles.css',
         'css/set1.css',
        
         'css/animate.css',

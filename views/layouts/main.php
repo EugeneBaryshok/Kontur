@@ -165,8 +165,11 @@ AppAsset::register($this);
                     <li><?= Html::a('ДО и ПОСЛЕ', ['gallary/after']) ?></li>
                 </ul>
             </li>
+             <li>
+                  <?= Html::a('Статьи', ['articles/articles_list']) ?>
+            </li>
            <!-- <li>
-                <?= Html::a('Галерея', ['gallary/index']) ?>
+              
             </li>-->
             <li>
                 <?= Html::a('Контакты', ['site/contact']) ?>
