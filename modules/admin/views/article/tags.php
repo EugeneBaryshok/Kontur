@@ -9,15 +9,15 @@ use yii\widgets\ActiveForm;
 ?>
 
 <div class="article-form">
-    <div class="container">
+    <div class="container" style="padding-top: 50px">
     <?php $form = ActiveForm::begin(); ?>
 
      
     <?= Html::dropDownList('tags', $selectedTags, $tags, ['class'=>'form-control', 'multiple'=>true]) ?>
  
 
-    <div class="form-group">
-        <?= Html::submitButton('Submit', ['class' => 'btn btn-success']) ?>
+    <div class="form-group" style="margin-top:20px">
+        <?= Html::submitButton('Выбрать', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

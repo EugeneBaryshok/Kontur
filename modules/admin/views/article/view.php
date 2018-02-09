@@ -7,23 +7,23 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Article */
 
 $this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Articles', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Статьи', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <?= Html::csrfMetaTags() ?>
 <div class="article-view">
-    <div class="container">
+    <div class="container admin-container">
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?> 
-        <?= Html::a('Set Image', ['set-image', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Set Category', ['set-category', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Set Tags', ['set-tags', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('Изменить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?> 
+        <?= Html::a('Изображение', ['set-image', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Категория', ['set-category', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Тэги', ['set-tags', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?'
+                'confirm' => 'Вы уверены что хотите удалить эту статью?'
                 
             ],
         ]) ?>
@@ -42,6 +42,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'user_id',
             'status',
             'category_id',
+            'slug',
+            'metatitle'
         ],
     ]) ?>
     </div>

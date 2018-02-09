@@ -9,16 +9,16 @@ use yii\widgets\ActiveForm;
 ?>
 
 <div class="article-form">
-	<div class="container">
+	<div class="container admin-container">
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'image')->fileInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'image')->fileInput(['maxlength' => true])->label('Изображение') ?>
 
 
  
 
     <div class="form-group">
-        <?= Html::submitButton('Submit', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Выбрать', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
