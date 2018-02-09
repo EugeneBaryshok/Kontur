@@ -52,7 +52,11 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www.konturland\.ru$ [NC]
 RewriteRule ^(.*)$ http://konturland.ru/$1 [R=301,L]
 
-
+#slash
+RewriteBase /
+RewriteCond %{HTTP_HOST} (.*)
+RewriteCond %{REQUEST_URI} /$ [NC]
+RewriteRule ^(.*)(/)$ $1 [L,R=301]
 
 #Obrabotka php v html
 #RemoveHandler .html .htm
@@ -154,7 +158,7 @@ RewriteRule ^(.*)$ http://konturland.ru/$1 [R=301,L]
 	RewriteCond %{QUERY_STRING} module=articles&id=14 
 	RewriteRule ^$ /contact? [L,R=301]
 	
-        RewriteRule ^contact/ /contact? [L,R=302]
+   #     RewriteRule ^contact/ /contact? [L,R=302]
 
 	RewriteCond %{QUERY_STRING} module=articles&id=129 [or]
 	RewriteCond %{QUERY_STRING} id=129&module=articles [or]
@@ -176,6 +180,8 @@ RewriteRule ^(.*)$ http://konturland.ru/$1 [R=301,L]
 	RewriteCond %{QUERY_STRING} module=catalog&show=section&id=64 [or]
 	RewriteCond %{QUERY_STRING} module=catalog&show=section_gallery&id=93
 	RewriteRule ^$ /gallary/index? [L,R=301]
+
+	RewriteRule ^gallary/index.* /gallary [R=301,L]
 	
 	RewriteCond %{QUERY_STRING} module=articles&id=128
 	RewriteRule ^$ /price/project? [L,R=301]
@@ -249,29 +255,29 @@ RewriteRule ^(.*)$ http://konturland.ru/$1 [R=301,L]
 #RewriteCond %{REQUEST_FILENAME} !-d
 #RewriteRule . /web/index.php
 
-# сжатие text, html, javascript, css, xml:
+# ??? text, html, javascript, css, xml:
 <ifModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
 </ifModule>
 
-# Включаем кэш в браузерах посетителей
+# ??????? ?????? ??????
 <ifModule mod_headers.c>
-    # Все html и htm файлы будут храниться в кэше браузера один день
+    # ??html ?htm ??? ???????? ???????? ?? ??
     <FilesMatch "\.(html|htm)$">
         Header set Cache-Control "max-age=43200"
     </FilesMatch>
-    # Все css, javascript и текстовые файлы будут храниться в кэше браузера одну неделю
+    # ??css, javascript ????????? ???????? ???????? ?? ???
     <FilesMatch "\.(js|css|txt)$">
         Header set Cache-Control "max-age=604800"
     </FilesMatch>
-    # Все флэш файлы и изображения будут храниться в кэше браузера один месяц
+    # ????? ??? ??????? ???????? ???????? ?? ???
     <FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png)$">
         Header set Cache-Control "max-age=2592000"
     </FilesMatch>
     <FilesMatch "\.(ttf)$">
         Header set Cache-Control "max-age=12592000"
     </FilesMatch>
-    # Отключаем кеширование php и других служебных файлов
+    # ???????????? php ???? ????? ???
     <FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
         Header unset Cache-Control
     </FilesMatch>

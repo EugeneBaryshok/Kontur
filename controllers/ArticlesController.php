@@ -14,7 +14,7 @@ class ArticlesController extends Controller
     public function actionArticles_list()
     {
 
-        $data = Article::getAll(1);
+        $data = Article::getAll(10);
 
         $popular = Article::getPopular();
 
@@ -32,24 +32,43 @@ class ArticlesController extends Controller
             ]);
     }
 
-    public function actionArticle($id)
+    public function actionArticle($slug)
     {
-        $article = Article::findOne($id);
-
+        // $article = Article::findOne($id);
+   // var_dump($slug);die;
+        $article = Article::find()->where(['slug' => $slug])->limit(1)->one();
+// var_dump($article);die;
         $popular = Article::getPopular();
 
         $recent = Article::getRecent();
 
         $categories = Category::getAll();
 
-
+     
+        // $this->createUrl('museums/view/1/best');
         return $this->render('article',[
             'article'=>$article,
             'popular'=>$popular,
             'recent'=>$recent,
-            'categories'=>$categories
+            'categories'=>$categories,  
             ]);
     }
+    
+    // public function actionView($slug)
+    // {
+    //     $this->render('view',array(
+    //         'model'=>$this->loadModelSlug($slug),
+    //     ));
+    // }
+
+    public function loadModelSlug($slug)
+    {
+        $model = Product::model()->findByAttributes(array('slug'=>$slug));
+        if($model===null)
+            throw new CHttpException(404,'The requested page does not exist.');
+        return $model;
+    }
+
 
     public function actionCategory($id)
     {

@@ -28,9 +28,9 @@ $this->params['breadcrumbs'][] = $this->title;
 				<?php foreach($articles as $article):?>
 					 <article class="article">
                         <div class="article-thumb">
-                            <a href="<?= Url::toRoute(['articles/article', 'id'=>$article->id]);?>"><img class="article-main-img" src="<?= $article->getImage();?>" alt=""></a>
+                            <a href="<?= Url::toRoute(['articles/article', 'slug'=>$article->slug]);?>"><img class="article-main-img" src="<?= $article->getImage();?>" alt=""></a>
 
-                            <a href="<?= Url::toRoute(['articles/article', 'id'=>$article->id]);?>" class="article-thumb-overlay text-center">
+                            <a href="<?= Url::toRoute(['articles/article', 'slug'=>$article->slug]);?>" class="article-thumb-overlay text-center">
                                 <div class="text-uppercase text-center">Читать далее</div>
                             </a>
                         </div>

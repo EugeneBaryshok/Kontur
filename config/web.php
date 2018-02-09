@@ -20,6 +20,7 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+            'loginUrl'=> ['auth/login']
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -60,6 +61,9 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 '' => 'site/index',
+                'articles/<article:[\w\-]+>/<slug:[\w\-]+>' => 'articles/<article>',
+                // 'articles/<article:[\w\-]+>/<slug:[\w\-]+>' => 'articles/<slug>',
+                'gallary' => 'gallary/index'   ,  
                 '<action:\w+>' => 'site/<action>',
                 'signup'=>'site/signup',
                 'submitsignup'=>'site/submitsignup',

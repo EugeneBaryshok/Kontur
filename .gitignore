@@ -31,3 +31,4 @@ tests/_support/_generated
 commands
 .bowerrc
 web/img
+/tests

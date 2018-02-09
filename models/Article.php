@@ -39,7 +39,10 @@ class Article extends \yii\db\ActiveRecord
             [['title','description','content'],'string'],
             [['date'],'date','format'=>'php:Y-m-d'],
             [['date'],'default','value'=>date('Y-m-d')],
-            [['title'],'string','max'=>255]
+            [['title'],'string','max'=>255],
+            [['slug'],'string','max'=>255],
+            [['metatitle'],'string','max'=>255],
+            // [['slug, metatitle'],'string','max'=>255]
         ];
     }
 
@@ -50,15 +53,17 @@ class Article extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'description' => 'Description',
-            'content' => 'Content',
-            'date' => 'Date',
-            'image' => 'Image',
-            'viewed' => 'Viewed',
+            'title' => 'Название',
+            'description' => 'Описание',
+            'content' => 'Содержимое',
+            'date' => 'Дата',
+            'image' => 'Изображение',
+            'viewed' => 'Просмотров',
             'user_id' => 'User ID',
-            'status' => 'Status',
-            'category_id' => 'Category ID',
+            'status' => 'Статус',
+            'category_id' => 'ID категории',
+            'slug' => 'Slug',
+            'metatitle' => 'Meta заголовок'
         ];
     }
     public function saveImage($fileName)
@@ -143,10 +148,10 @@ class Article extends \yii\db\ActiveRecord
 
       public function getDate()
       {
-        return Yii::$app->formatter->asDate($this->date);
+        return Yii::$app->formatter->asDate($this->date, 'dd-MM-yyyy');
       }
 
-      public static function getAll($pageSize = 5)
+      public static function getAll($pageSize = 10)
 
       {
                 // build a DB query to get all articles with status = 1

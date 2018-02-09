@@ -4,11 +4,11 @@ use yii\widgets\LinkPager;
 use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
 
-$this->title = $article->title;
-
+$this->title = ($article->title != 0) ? $article->title : $article->metatitle;
+// $this->createUrl('site/page', ['slug' => $article->slug]);
 $this->params['breadcrumbs'][] = ['label' => 'Статьи', 'url' => ['/articles/articles_list']];
 // $this->params['breadcrumbs'][] = Yii::$app->controller->substr_content($this->title, '90');
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = $article->title;
 ?>
 
 <div class="main_block article-one">
