@@ -36,9 +36,9 @@ $this->params['breadcrumbs'][] = $this->title;
                         </div>
                         <div class="article-content">
                             <header class="entry-header text-center text-uppercase">
-                                <h6><a href="<?= Url::toRoute(['articles/category','id'=>$article->category->id])?>"> <?= $article->category->title; ?></a></h6>
+                                <h6><a href="<?= Url::toRoute(['articles/category','slug'=>$article->category->slug])?>"> <?= $article->category->title; ?></a></h6>
 
-                                <h2 class="entry-title"><a href="<?= Url::toRoute(['articles/article', 'id'=>$article->id]);?>"><?= $article->title?></a></h2>
+                                <h2 class="entry-title"><a href="<?= Url::toRoute(['articles/article', 'slug'=>$article->slug]);?>"><?= $article->title?></a></h2>
                                 <div class="divider divider-1"></div>
 
 
@@ -48,7 +48,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 </p>
 
                                 <div class="btn-continue-reading text-center text-uppercase">
-                                    <a href="<?= Url::toRoute(['articles/article', 'id'=>$article->id]);?>" class="more-link">Читать далее</a>
+                                    <a href="<?= Url::toRoute(['articles/article', 'slug'=>$article->slug]);?>" class="more-link">Читать далее</a>
                                 </div>
                             </div>
                             <div class="social-share">

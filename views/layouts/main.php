@@ -183,11 +183,14 @@ AppAsset::register($this);
 
 
 <div class="wrap">
-
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= $content ?>
+    <div class=" breadcrumb-container">
+        <div class="container breadcrumb-container">
+            <?= Breadcrumbs::widget([
+                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            ]) ?>
+        </div>
+    </div>
+    <?= $content ?>
 
 </div>
 

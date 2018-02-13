@@ -35,7 +35,6 @@ class ArticlesController extends Controller
     public function actionArticle($slug)
     {
         // $article = Article::findOne($id);
-   // var_dump($slug);die;
         $article = Article::find()->where(['slug' => $slug])->limit(1)->one();
 // var_dump($article);die;
         $popular = Article::getPopular();
@@ -70,11 +69,14 @@ class ArticlesController extends Controller
     }
 
 
-    public function actionCategory($id)
+    public function actionCategory($slug)
     {
                // build a DB query to get all articles with status = 1
+            
+            $category = Category::find()->where(['slug' => $slug])->limit(1)->one();
+            // $category = Category::findOne($id);
+            $id = $category->id;
             // var_dump($id);die;
-            $category = Category::findOne($id);
             $data=Category::getArticlesByCategory($id);
             
             $popular = Article::getPopular();

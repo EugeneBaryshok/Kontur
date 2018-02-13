@@ -182,6 +182,12 @@ RewriteRule ^(.*)(/)$ $1 [L,R=301]
 	RewriteRule ^$ /gallary/index? [L,R=301]
 
 	RewriteRule ^gallary/index.* /gallary [R=301,L]
+
+
+	RewriteCond %{QUERY_STRING} module=articles&id=128
+	RewriteRule ^$ /price/project? [L,R=301]
+
+	#RewriteRule ^articles/article/(.*)$ /articles/$1 [R=301,L]
 	
 	RewriteCond %{QUERY_STRING} module=articles&id=128
 	RewriteRule ^$ /price/project? [L,R=301]

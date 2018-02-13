@@ -42,6 +42,7 @@ class Article extends \yii\db\ActiveRecord
             [['title'],'string','max'=>255],
             [['slug'],'string','max'=>255],
             [['metatitle'],'string','max'=>255],
+            [['metadescription'],'string','max'=>255],
             // [['slug, metatitle'],'string','max'=>255]
         ];
     }
@@ -63,7 +64,9 @@ class Article extends \yii\db\ActiveRecord
             'status' => 'Статус',
             'category_id' => 'ID категории',
             'slug' => 'Slug',
-            'metatitle' => 'Meta заголовок'
+            'metatitle' => 'Meta заголовок',
+            'metadescription' => 'Meta описание',
+
         ];
     }
     public function saveImage($fileName)

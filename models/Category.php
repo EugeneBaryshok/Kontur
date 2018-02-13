@@ -29,6 +29,10 @@ class Category extends \yii\db\ActiveRecord
     {
         return [
             [['title'], 'string', 'max' => 255],
+            [['title','textbottom','texttop'],'string'],
+            [['slug'],'string','max'=>255],
+            [['metatitle'],'string','max'=>255],
+            [['metadescription'],'string','max'=>255],
         ];
     }
 
@@ -40,6 +44,11 @@ class Category extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'title' => 'Название',
+            'texttop' => 'Содержимое вверху',
+            'textbottom' => 'Содержимое внизу',
+            'slug' => 'Slug',
+            'metatitle' => 'Meta заголовок',
+            'metadescription' => 'Meta описание',
         ];
     }
 

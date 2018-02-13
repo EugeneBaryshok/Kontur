@@ -43,7 +43,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'status',
             'category_id',
             'slug',
-            'metatitle'
+            'metatitle',
+            'metadescription',
         ],
     ]) ?>
     </div>

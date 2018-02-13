@@ -61,10 +61,24 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 '' => 'site/index',
-                'articles/<article:[\w\-]+>/<slug:[\w\-]+>' => 'articles/<article>',
-                // 'articles/<article:[\w\-]+>/<slug:[\w\-]+>' => 'articles/<slug>',
+
+                //  [
+                //     'pattern' => 'articles/<slug:\w+>',
+                //     'route' => 'articles/article',
+                //     'mode' => \yii\web\UrlRule::CREATION_ONLY
+                // ],
+
+                // 'DELETE admin/article/<id:\d+>' => 'article/delete',
+
+                'articles/<slug:\w+>' => 'articles/article',
+
+                'articles/category/<slug:\w+>' => 'articles/category',
+
+                'articles' => 'articles/articles_list',
+
                 'gallary' => 'gallary/index'   ,  
                 '<action:\w+>' => 'site/<action>',
+               
                 'signup'=>'site/signup',
                 'submitsignup'=>'site/submitsignup',
             ]

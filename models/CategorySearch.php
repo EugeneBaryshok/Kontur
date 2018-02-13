@@ -20,6 +20,7 @@ class CategorySearch extends Category
         return [
             [['id'], 'integer'],
             [['title'], 'safe'],
+            [['slug'], 'safe'],
         ];
     }
 
