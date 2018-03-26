@@ -15,6 +15,15 @@ $(document).ready(function () {
     });
 
 
+    $('.slider').slick({
+      dots: true,
+      infinite: true,
+      arrows: true,
+      autoplay: true,
+      speed: 500,
+      fade: true,
+      cssEase: 'linear'
+    });
 
     $('.signup').click(function(event){ // нажатие на кнопку - выпадает модальное окно
         event.preventDefault();

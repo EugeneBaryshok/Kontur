@@ -6,7 +6,7 @@ use yii\bootstrap\Modal;
 use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 
-$this->title = 'Ландшафтный дизайн в СПб | Заказать ландшафтный дизайн в Петербурге и Ленобласти (ЛО) по оптимальной цене';
+$this->title = 'Ландшафтный дизайн в СПб | Заказать ландшафтный дизайн под ключ';
 ?>
 <style>
     .header {
@@ -165,6 +165,9 @@ display:none;
                         воздухом, слушать журчание воды в ручье у себя на даче.</p>
 
 <!--                    <br><span class="slogan_index">15 лет на рынке ландшафтных услуг</span>-->
+					<p>У нас вы можете заказать ландашфтный дизайн под ключ. Мы начнём с спроектировки, а закончим благоустройстовом и воплощением в жизнь ваших планы.</p>
+
+
                     <br><span class="slogan_index">Жить в красоте и удобстве проще, чем кажется</span>
                     <button class="purple_button signup"><img src="./img/proj_button.png">Оставить заявку</button>
                     <a href="<?= Url::to(['price/project'])?>">
@@ -230,14 +233,14 @@ display:none;
                 <div class="col-md-offset-6 col-md-3 post">
                     <div class="center">
                         <blockquote>
-                            <p>Создание уникальных проектов</p>
+                            <p>Большой опыт в создание уникальных проектов</p>
                         </blockquote>
                         <blockquote>
                             <p>Индивидуальный подход к каждому клиенту</p>
 
                         </blockquote>
                         <blockquote>
-                            <p>Полный комплекс услуг по ландшафтному проектированию участков и их дизайну</p>
+                            <p>Полный комплекс услуг по ландшафтному дизайну и проектированию</p>
 
                         </blockquote>
                         <blockquote>
@@ -249,18 +252,16 @@ display:none;
                 <div class="col-md-3 post">
                     <div class="center">
                         <blockquote>
-                            <p>Соблюдение всех сроков и условий</p>
+                            <p>Соблюдение сроков работ</p>
                         </blockquote>
                         <blockquote>
-                            <p>Опыт и высокая квалификация наших специалистов</p>
+                            <p>Высокая квалификация наших специалистов</p>
                         </blockquote>
                         <blockquote>
                             <p>Соблюдение технологий и производства работ</p>
 
                         </blockquote>
-                        <blockquote>
-                            <p>Эстетическое наслаждение, комфорт и радость</p>
-                        </blockquote>
+                        
                     </div>
                 </div>
             </div>
@@ -321,7 +322,7 @@ display:none;
   <div class="feature">
         <div class="container">
         <span class="text_logo">KOHTYP</span>
-            <h3 class="feature_h3">Доверьте свой комфорт нам!</h3>
+            <h3 class="feature_h3">Закажите ландшафтный дизайн у нас!</h3>
             <hr style="border: solid #ffa825; margin-top:40px; margin-bottom: 60px;" width="100px" size="2px" >
 
 
@@ -353,5 +354,156 @@ display:none;
 
         </div>
     </div>
+    
 </div>
 
+<div class="container" id="portfolio">
+		<div class="row">
+			<h2 style="margin-bottom: 30px"><span class="green">Примеры ландшафтного дизайна дачного участка — </span>фото</h2>
+		</div>
+<p>
+Мы предлагаем полный спектр услуг начиная от проектирования заканчивая благоустройством и последующим сервисным обслуживанием. <br>
+</p>
+		<div class="clearfix mosaicflow"></div>
+		<div style="visibility: hidden; width: 100%;"></div>
+		
+		<div class="mosaicflow__column" style="width: 25%;">
+			<div class="mosaicflow__item" id="mosaic-0-itemid-1">
+					<a class="fancyimage" rel="group" href="/img/blag/blag_img/1.jpg">
+						<img src="/img/blag/blag_tabs/1.jpg" alt="1.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+					</a>
+			</div>
+			
+			<div class="mosaicflow__item" id="mosaic-0-itemid-5">
+					<a class="fancyimage" rel="group" href="/img/blag/blag_img/13.jpg">
+						<img src="/img/blag/blag_tabs/13.jpg" alt="13.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+					</a>
+			</div>
+			
+			<div class="mosaicflow__item" id="mosaic-0-itemid-9">
+				<a class="fancyimage" rel="group" href="/img/blag/blag_img/17.jpg">
+					<img src="/img/blag/blag_tabs/17.jpg" alt="17.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+				</a>
+			</div>
+			
+			<div class="mosaicflow__item" id="mosaic-0-itemid-13">
+				<a class="fancyimage" rel="group" href="/img/blag/blag_img/20.jpg">
+					<img src="/img/blag/blag_tabs/20.jpg" alt="20.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+				</a>
+			</div>
+			
+			<div class="mosaicflow__item" id="mosaic-0-itemid-17">
+				<a class="fancyimage" rel="group" href="/img/blag/blag_img/24.jpg">
+					<img src="/img/blag/blag_tabs/24.jpg" alt="24.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+				</a>
+			</div>
+			
+		</div>
+	
+		<div class="mosaicflow__column" style="width: 25%;">
+			<div class="mosaicflow__item" id="mosaic-0-itemid-2">
+			<a class="fancyimage" rel="group" href="/img/blag/blag_img/10.jpg">
+				<img src="/img/blag/blag_tabs/10.jpg" alt="10.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+			</a>
+			</div>
+			<div class="mosaicflow__item" id="mosaic-0-itemid-6">
+			<a class="fancyimage" rel="group" href="/img/blag/blag_img/40.jpg">
+				<img src="/img/blag/blag_tabs/40.jpg" alt="40.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+			</a>
+			</div>
+			<div class="mosaicflow__item" id="mosaic-0-itemid-10">
+			<a class="fancyimage" rel="group" href="/img/blag/blag_img/18.jpg">
+				<img src="/img/blag/blag_tabs/18.jpg" alt="18.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+			</a>
+			</div>
+			<div class="mosaicflow__item" id="mosaic-0-itemid-14">
+			<a class="fancyimage" rel="group" href="/img/blag/blag_img/21.jpg">
+				<img src="/img/blag/blag_tabs/21.jpg" alt="21.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+			</a>
+			</div>
+			<div class="mosaicflow__item" id="mosaic-0-itemid-18">
+			<a class="fancyimage" rel="group" href="/img/blag/blag_img/47.jpg">
+				<img src="/img/blag/blag_tabs/47.jpg" alt="47.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+			</a>
+			</div>
+			
+		</div>
+	
+		<div class="mosaicflow__column" style="width: 25%;">
+			<div class="mosaicflow__item" id="mosaic-0-itemid-3">
+				<a class="fancyimage" rel="group" href="/img/blag/blag_img/11.jpg">
+					<img src="/img/blag/blag_tabs/11.jpg" alt="11.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+				</a>
+			</div>
+			<div class="mosaicflow__item" id="mosaic-0-itemid-7">
+				<a class="fancyimage" rel="group" href="/img/blag/blag_img/15.jpg">
+					<img src="/img/blag/blag_tabs/15.jpg" alt="15.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+				</a>
+			</div>
+			<div class="mosaicflow__item" id="mosaic-0-itemid-11">
+				<a class="fancyimage" rel="group" href="/img/blag/blag_img/116.jpg">
+					<img src="/img/blag/blag_tabs/116.jpg" alt="116.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+				</a>
+			</div>
+			<div class="mosaicflow__item" id="mosaic-0-itemid-15">
+				<a class="fancyimage" rel="group" href="/img/blag/blag_img/42.jpg">
+					<img src="/img/blag/blag_tabs/42.jpg" alt="42.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+				</a>
+			</div>
+			<div class="mosaicflow__item" id="mosaic-0-itemid-19">
+				<a class="fancyimage" rel="group" href="/img/blag/blag_img/48.jpg">
+					<img src="/img/blag/blag_tabs/48.jpg" alt="48.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+				</a>
+			</div>
+			
+		
+		</div>
+	
+		<div class="mosaicflow__column" style="width: 25%;">
+			<div class="mosaicflow__item" id="mosaic-0-itemid-4">
+				<a class="fancyimage" rel="group" href="/img/blag/blag_img/12.jpg">
+					<img src="/img/blag/blag_tabs/12.jpg" alt="12.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+				</a>
+				</div>
+				<div class="mosaicflow__item" id="mosaic-0-itemid-8">
+				<a class="fancyimage" rel="group" href="/img/blag/blag_img/16.jpg">
+					<img src="/img/blag/blag_tabs/16.jpg" alt="16.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+				</a>
+				</div>
+				<div class="mosaicflow__item" id="mosaic-0-itemid-12">
+				<a class="fancyimage" rel="group" href="/img/blag/blag_img/2.jpg">
+					<img src="/img/blag/blag_tabs/2.jpg" alt="2.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+				</a>
+				</div>
+				<div class="mosaicflow__item" id="mosaic-0-itemid-16">
+				<a class="fancyimage" rel="group" href="/img/blag/blag_img/46.jpg">
+					<img src="/img/blag/blag_tabs/46.jpg" alt="46.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+				</a>
+				</div>
+				<div class="mosaicflow__item" id="mosaic-0-itemid-20">
+				<a class="fancyimage" rel="group" href="/img/blag/blag_img/49.jpg">
+					<img src="/img/blag/blag_tabs/49.jpg" alt="49.jpg"><!--        <img src="img/blag/blag_tabs/1.jpg"/>-->
+				</a>
+				</div>
+
+		</div>
+		
+		
+		
+		
+</div>	
+
+
+	
+	
+	
+
+	
+	
+	
+	
+<!--<script type="text/javascript">-->
+<!--    $(document).ready(function () {-->
+<!--        $("a.fancyimage").fancybox();-->
+<!--    });-->
+<!--</script>-->

@@ -7,11 +7,15 @@ use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
+use vova07\imperavi\Widget;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\IndexForm;
 use app\models\EntryForm;
 use app\models\Country;
+use yii\helpers\Url;
+
+
 
 class SiteController extends Controller
 {
@@ -46,7 +50,6 @@ class SiteController extends Controller
      */
     public function actions()
     {
-
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
@@ -55,6 +58,18 @@ class SiteController extends Controller
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
+            //  'images-get' => [
+            // 'class' => 'vova07\imperavi\actions\GetImagesAction',
+            // // 'url' => Yii::getAlias('@web/upload/image'),// Directory URL address, where files are stored.
+            // 'path' =>Url::to('@web/upload/image/'), // Or absolute path to directory where files are stored.
+            // 'type' => GetAction::TYPE_IMAGES,
+            // ],
+            // 'image-upload' => [
+            //     'class' => 'vova07\imperavi\actions\UploadFileAction',
+            //     // 'url' => Yii::getAlias('@web/upload/image'), // Directory URL address, where files are stored.
+            //     'path' => Url::to('@web/upload/image/'), // Or absolute path to directory where files are stored.
+            //     'type' => GetAction::TYPE_IMAGES,
+            // ],
         ];
     }
 

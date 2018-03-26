@@ -11,6 +11,9 @@ use app\models\ImageUpload;
 use yii\web\UploadedFile;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+
+use vova07\imperavi\Widget;
+
 // use yii\web\YiiAsset;
 use yii\filters\VerbFilter;
 use yii\helpers\ArrayHelper; 

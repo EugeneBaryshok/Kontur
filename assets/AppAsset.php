@@ -18,6 +18,7 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $gallaryUrl = '@web/img/blag';
+    public $uploadUrl = '@web/upload/image';
 
     public $depends = [
         'yii\bootstrap\BootstrapAsset',
@@ -25,7 +26,9 @@ class AppAsset extends AssetBundle
 
     ];
     public $css = [
-//        'css/site.css',
+       'css/slick.css',
+        'css/slick-theme.css',
+
         'css/fonts.css',
         'css/style.css',
         'css/main_pages.css',
@@ -50,6 +53,7 @@ class AppAsset extends AssetBundle
         'js/fancybox/jquery.fancybox.pack.js',
         'js/jquery.mosaicflow.min.js',
         'js/fancybox_my.js',
+        'js/slick.min.js',
         'js/index.js',
        // 'js/text-animate.js',
     ];

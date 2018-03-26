@@ -69,7 +69,9 @@ $config = [
                 // ],
 
                 // 'DELETE admin/article/<id:\d+>' => 'article/delete',
-
+                'articles/gazon' => 'articles/gazon',
+                'articles/tree' => 'articles/tree',
+                'articles/flower' => 'articles/flower',
                 'articles/<slug:\w+>' => 'articles/article',
 
                 'articles/category/<slug:\w+>' => 'articles/category',

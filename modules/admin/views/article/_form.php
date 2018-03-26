@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use vova07\imperavi\Widget;
+use yii\helpers\Url;
 // use yii\widgets\CKEditor;
 /* @var $this yii\web\View */
 /* @var $model app\models\Article */
@@ -16,7 +18,20 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'content')->textarea(['rows' => 6]) ?>
+       
+        <?= $form->field($model, 'content')->widget(Widget::className(), [
+        'settings' => [
+            'lang' => 'ru',
+            'minHeight' => 200,
+            'imageUpload' => Url::to('@web/upload/image/'),
+            'plugins' => [
+                'clips',
+                'fullscreen',
+                 'imagemanager',
+            ],
+        ],
+    ]);
+ ?>
 
     <?= $form->field($model, 'date')->textInput() ?>
 

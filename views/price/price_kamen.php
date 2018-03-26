@@ -13,18 +13,20 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 <div class="price_div">
-    <div class="container ">
+        <div class="container ">
 
         <div class="row">
-            <div class="col-md-offset-2 col-lg-offset-2 col-md-8 col-lg-8 col-sm-12 col-xs-12 orange_block">
-                <p style="margin-bottom: 30px; font-size: 38px;">АКЦИИ</p>
+            <div class="col-md-offset-2 col-lg-offset-0 col-md-8 col-lg-11 col-sm-12 col-xs-12 orange_block">
+                <p style="margin-bottom: 20px; font-size: 38px;">АКЦИЯ</p>
 
                 <blockquote class="sales">
-                    <p>При заключении договора на реализацию работ по благоустройству участка <span class="orange_bold">50%</span> стоимости проекта возвращается.</p>
+                    <p>При заключении договора на выполнение ландшафтных работ - <span class="orange_bold">ПРОЕКТ В ПОДАРОК!</span></p>
+					<p>При заказе ландшафтного проекта скидка <span class="orange_bold"> 10 %</span> до 31 марта 2018 года.</p>
+					
                 </blockquote>
             </div>
         </div>
-    </div>
+		</div>
 
     <div class="container">
 
